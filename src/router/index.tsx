@@ -1,11 +1,11 @@
 export default {
     menus: [
         // 菜单相关路由
-        { key: '/main/one/todo', title: '首页', icon: 'mobile', component: 'Todo' },
-        { key: '/main/ui/buttons', title: '按钮', icon: 'mobile', component: 'Buttons' },
-        { key: '/main/ui/icons', title: '图标', icon: 'mobile', component: 'Icons' },
-        { key: '/main/ui/spins', title: '加载中', icon: 'mobile', component: 'Spins' },
-        { key: '/main/ui/modals', title: '对话框', icon: 'mobile', component: 'Modals' },
+        { key: '/main/one/todo', title: '首页', icon: 'bank', component: 'Todo' },
+        { key: '/main/ui/buttons', title: '按钮', icon: 'book', component: 'Buttons' },
+        { key: '/main/ui/icons', title: '图标', icon: 'bulb', component: 'Icons' },
+        { key: '/main/ui/spins', title: '加载中', icon: 'bug', component: 'Spins' },
+        { key: '/main/ui/modals', title: '对话框', icon: 'audio', component: 'Modals' },
         {
             key: '/main/animation',
             title: '动画',

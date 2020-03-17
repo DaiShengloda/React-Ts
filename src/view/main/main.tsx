@@ -3,6 +3,7 @@ import { Layout } from 'antd'
 import Navside from './navside/navside'
 import Routes from '../../router/routes'
 import { getGlobalparams } from '../../service/common'
+import './index.scss'
 
 class Main extends React.Component {
 
@@ -12,13 +13,12 @@ class Main extends React.Component {
 
     render() {
         return(
-            <Layout>
-                <Layout.Sider>
+            <Layout className="main">
+                <Layout.Header className="main-header">Header</Layout.Header>
+                <Layout className="main-content">
                     <Navside/>
-                </Layout.Sider>
-                <Layout.Content>
-                    <Routes/>
-                </Layout.Content>
+                    <Layout.Content><Routes/></Layout.Content>
+                </Layout>
             </Layout>
         )
     }

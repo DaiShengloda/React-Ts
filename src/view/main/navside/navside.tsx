@@ -1,6 +1,5 @@
-import { Menu, Button, Icon } from 'antd';
+import { Menu, Button, Icon, Layout } from 'antd';
 import React, { useState } from 'react';
-import { RouteChildrenProps } from 'react-router'
 import routers from '../../../router/index'
 import { Link } from 'react-router-dom'
 
@@ -31,36 +30,58 @@ function renderSubMenu(subMenu: any) {
     )
 }
 
+interface SelectItem {
+    item: any;
+    key: string;
+    keyPath: string;
+    selectedKeys: any;
+    domEvent: any;
+}
+
 class Navside extends React.Component<object, object> {
-  state = {
-    collapsed: false,
-  };
+    state = {
+        collapsed: false,
+        selectedKeys: '/main/one/todo',
+    };
 
-  toggleCollapsed = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    });
-  };
+    toggleCollapsed = (collapsed: boolean): void => {
+        this.setState({
+            collapsed: collapsed,
+        });
+    };
 
-  handleSelect = () => {
-  }
+    handleSelect = (data: any): void => {
+        const { key } = data
+        this.setState({
+            selectedKeys: key,
+        });
+    };
 
-  render() {
-    return (
-      <div style={{ width: 256 }}>
-        {/* <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-            {React.createElement(this.state.collapsed ? '展开' : '收起')}
-        </Button> */}
-        {routers.menus.map((item, index) => (
-            <Menu>
-                {item.subs
-                    ? renderSubMenu(item)
-                    : renderMenuItem(item)}
-            </Menu>
-        ))}
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Layout.Sider 
+                breakpoint="lg"
+                collapsible
+                collapsed={this.state.collapsed}
+                onCollapse={this.toggleCollapsed}
+            >
+                {routers.menus.map((item, index) => (
+                    <Menu
+                        key={index}
+                        defaultSelectedKeys={['/main/one/todo']}
+                        selectedKeys={[this.state.selectedKeys]}
+                        mode="inline"
+                        theme="dark"
+                        onSelect={this.handleSelect}
+                    >
+                        {item.subs
+                            ? renderSubMenu(item)
+                            : renderMenuItem(item)}
+                    </Menu>
+                ))}
+            </Layout.Sider>
+        );
+    }
 }
 
 export default Navside;
