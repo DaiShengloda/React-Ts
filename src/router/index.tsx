@@ -1,7 +1,7 @@
 export default {
     menus: [
         // 菜单相关路由
-        { key: '/main/one/todo', title: '首页', icon: 'bank', component: 'Todo' },
+        { key: '/main/one/todo', title: '首页', icon: 'bank', component: 'HomeData' },
         { key: '/main/ui/buttons', title: '按钮', icon: 'book', component: 'Buttons' },
         { key: '/main/ui/icons', title: '图标', icon: 'bulb', component: 'Icons' },
         { key: '/main/ui/spins', title: '加载中', icon: 'bug', component: 'Spins' },
