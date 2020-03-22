@@ -1,7 +1,7 @@
-import { message } from 'antd';
+import { message } from 'antd'
+import cookie from './cookie'
 
-const baseUrl = '/'
-console.log(baseUrl)
+const baseUrl = process.env.REACT_APP_URL
 // 401 未登录 403 无权限
 export default {
 	// `url` is the server URL that will be used for the request
@@ -14,6 +14,10 @@ export default {
 	// It can be convenient to set `baseURL` for an instance of axios to pass relative URLs
 	// to methods of that instance.
 	baseURL: baseUrl,
+
+    // headers:{
+    //     Cookie: cookie
+    // },
 
 	reqInterceptor: [
 		function(config) {
@@ -32,6 +36,9 @@ export default {
         // res响应处理
 		function(response) {
 			try {
+                if(!response.data) {
+                    return Promise.reject(response.data)
+                }
 				if (response.data.success) {
 					return response.data
 				} else if (

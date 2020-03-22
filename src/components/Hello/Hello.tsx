@@ -1,7 +1,7 @@
 // src/components/Hello.tsx
 
 import * as React from 'react';
-import './Hello.scss';
+import './hello.scss';
 import { Button } from 'antd'
 
 interface Props {

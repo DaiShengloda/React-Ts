@@ -2,7 +2,7 @@ import { Table } from 'antd'
 import * as React from 'react'
 import { getHomeData } from '../../service/home'
 import { ColumnProps } from 'antd/es/table'
-import { Params, DataList } from './tableTypes'
+import { Params, DataList } from './homeDataTypes'
 
 const columns: ColumnProps<DataList>[] = [
     {
@@ -58,7 +58,7 @@ class HomeData extends React.Component<Props, State> {
 
     render() {
         return(
-            <Table columns={columns} dataSource={this.state.tableData} />
+            <Table columns={columns} dataSource={this.state.tableData} rowKey="statistic_date"/>
         )
     }
 }

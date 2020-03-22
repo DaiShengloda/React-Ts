@@ -1,5 +1,5 @@
 import Todo from './todo/todo'
-import HomeData from './table/table'
+import HomeData from './homeData/homeData'
 
 export default {
     Todo,
