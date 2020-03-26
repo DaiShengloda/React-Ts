@@ -19,7 +19,8 @@
     "babel-plugin-import": "^1.13.0",
     "cross-fetch": "^3.0.4",
     "customize-cra": "^0.9.1",
-    "http-proxy-middleware": "^1.0.1",
+    "generate-asset-webpack-plugin": "^0.3.0",
+    "http-proxy-middleware": "^0.20.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "node-sass": "^4.13.1",
@@ -42,7 +43,6 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
-  "proxy": "http://pfzone.senguo.cc",
   "eslintConfig": {
     "extends": "react-app"
   },

@@ -1,7 +1,7 @@
 import { message } from 'antd'
 import cookie from './cookie'
 
-const baseUrl = process.env.REACT_APP_URL
+const baseUrl = '/public'
 // 401 未登录 403 无权限
 export default {
 	// `url` is the server URL that will be used for the request
