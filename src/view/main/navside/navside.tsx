@@ -1,7 +1,12 @@
 import { Menu, Button, Icon, Layout } from 'antd';
 import React, { useState } from 'react';
 import routers from '../../../router/index'
-import { Link } from 'react-router-dom'
+// import { Link, useLocation } from 'react-router-dom'
+import {
+    BrowserRouter as Router,
+    Link,
+    withRouter
+  } from "react-router-dom"
 
 function renderMenuItem(menu: any) {
     return(
@@ -38,11 +43,32 @@ interface SelectItem {
     domEvent: any;
 }
 
-class Navside extends React.Component<object, object> {
-    state = {
-        collapsed: false,
-        selectedKeys: '/main/one/todo',
-    };
+interface _S {
+    collapsed: boolean;
+    selectedKeys: string;
+}
+
+interface _P {
+
+}
+
+class Navside extends React.Component<any, _S> {
+    constructor(props: any) {
+        super(props)
+        this.state = {
+            collapsed: false,
+            selectedKeys: '/main/one/todo',
+        }
+        
+    }
+
+    componentDidMount() {
+        const { location } = this.props
+        this.setState({
+            selectedKeys: location.pathname
+        })
+    }
+    
 
     toggleCollapsed = (collapsed: boolean): void => {
         this.setState({
@@ -68,7 +94,6 @@ class Navside extends React.Component<object, object> {
                 {routers.menus.map((item, index) => (
                     <Menu
                         key={index}
-                        defaultSelectedKeys={['/main/one/todo']}
                         selectedKeys={[this.state.selectedKeys]}
                         mode="inline"
                         theme="dark"
@@ -84,4 +109,4 @@ class Navside extends React.Component<object, object> {
     }
 }
 
-export default Navside;
+export default withRouter(Navside);

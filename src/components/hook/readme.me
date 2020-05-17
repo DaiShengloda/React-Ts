@@ -1,0 +1,28 @@
+# Hook
+## 1.概述
+Hook本质上是函数，能将react某些特性嵌入到函数式组件中;
+推荐尽量使用Hook来编写函数式组件，逐渐替代class类组件；
+
+## 2.useState
+在函数式组件提供状态的使用方案；
+可分离不同状态使用；
+
+## 3.useEffect
+为函数式组件提供生命周期，可添加“副作用”操作；
+相当于class类组件的DidMount、DidUpdate、WillUnmount;
+
+## 4.Hook规则
+在最顶层调用Hook，不要在循环、嵌套、条件判断中调用；
+在React函数式组件（自定义Hook）中调用hook；
+
+## 5.自定义Hook
+自定义Hook是一种自然遵循Hook设计的约定，并不是React的新特性；
+解决React组件之间共享代码逻辑、状态的问题；
+特性：
+    必须以use开头，便于React对Hook规则检测；
+    state状态完全隔离，原理等同于Hook分割使用；
+useReducer Hook：管理包含多个子值得state对象；
+
+## 6.Hook API
+基础Hook；
+基础Hook得变体，在特定情况下使用；
