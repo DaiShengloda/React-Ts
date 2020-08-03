@@ -33,6 +33,11 @@ export default {
                     title: 'Hook',
                     component: 'Hook',
                 },
+                {
+                    key: '/main/study/advancedGuide',
+                    title: '高级指引',
+                    component: 'AdvancedGuide',
+                },
             ],
         },
     ],
