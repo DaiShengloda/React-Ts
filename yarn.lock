@@ -953,9 +953,9 @@
   integrity sha1-CnCVreoGckPOMoPhtWuKj0U7JCo=
 
 "@hapi/hoek@8.x.x", "@hapi/hoek@^8.3.0":
-  version "8.5.0"
-  resolved "https://registry.npm.taobao.org/@hapi/hoek/download/@hapi/hoek-8.5.0.tgz#2f9ce301c8898e1c3248b0a8564696b24d1a9a5a"
-  integrity sha1-L5zjAciJjhwySLCoVkaWsk0amlo=
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.5.1.tgz#fde96064ca446dec8c55a8c2f130957b070c6e06"
+  integrity sha512-yN7kbciD87WzLGc5539Tn0sApjyiGHAJgKvG9W8C7O+6c7qmoQMfVs0W4bX17eqz6C78QJqqFrtgdK5EWf6Qow==
 
 "@hapi/joi@^15.0.0":
   version "15.1.1"
@@ -1348,13 +1348,6 @@
   dependencies:
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
-
-"@types/http-proxy@^1.17.3":
-  version "1.17.4"
-  resolved "https://registry.npm.taobao.org/@types/http-proxy/download/@types/http-proxy-1.17.4.tgz#e7c92e3dbe3e13aa799440ff42e6d3a17a9d045b"
-  integrity sha1-58kuPb4+E6p5lED/QubToXqdBFs=
-  dependencies:
-    "@types/node" "*"
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
@@ -4932,6 +4925,11 @@ gaze@^1.0.0:
   dependencies:
     globule "^1.0.0"
 
+generate-asset-webpack-plugin@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/generate-asset-webpack-plugin/-/generate-asset-webpack-plugin-0.3.0.tgz#6662ef8033f6d4330c7889816461ce2568313318"
+  integrity sha512-q1Vc9tsQzPMIYF8gmzjAe9TkdYr5AGrjNl9CB/jJCBkavHAo+qYdQ0IlPJsPHzil8U/8ZJcP56HX6Li2s3B3bg==
+
 gensync@^1.0.0-beta.1:
   version "1.0.0-beta.1"
   resolved "https://registry.npm.taobao.org/gensync/download/gensync-1.0.0-beta.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgensync%2Fdownload%2Fgensync-1.0.0-beta.1.tgz#58f4361ff987e5ff6e1e7a210827aa371eaac269"
@@ -5380,18 +5378,17 @@ http-proxy-middleware@0.19.1:
     lodash "^4.17.11"
     micromatch "^3.1.10"
 
-http-proxy-middleware@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.npm.taobao.org/http-proxy-middleware/download/http-proxy-middleware-1.0.3.tgz#f73daad8dac622d51fe1769960c914b9b1f75a72"
-  integrity sha1-9z2q2NrGItUf4XaZYMkUubH3WnI=
+http-proxy-middleware@^0.20.0:
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.20.0.tgz#5b128f7207985c4ea91b53fab8ad897a48c690d6"
+  integrity sha512-dNJAk71nEJhPiAczQH9hGvE/MT9kEs+zn2Dh+Hi94PGZe1GluQirC7mw5rdREUtWx6qGS1Gu0bZd4qEAg+REgw==
   dependencies:
-    "@types/http-proxy" "^1.17.3"
-    http-proxy "^1.18.0"
+    http-proxy "^1.17.0"
     is-glob "^4.0.1"
-    lodash "^4.17.15"
+    lodash "^4.17.14"
     micromatch "^4.0.2"
 
-http-proxy@^1.17.0, http-proxy@^1.18.0:
+http-proxy@^1.17.0:
   version "1.18.0"
   resolved "https://registry.npm.taobao.org/http-proxy/download/http-proxy-1.18.0.tgz#dbe55f63e75a347db7f3d99974f2692a314a6a3a"
   integrity sha1-2+VfY+daNH2389mZdPJpKjFKajo=
